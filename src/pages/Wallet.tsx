@@ -175,7 +175,7 @@ const Wallet = () => {
                     </DialogHeader>
                     <div className="space-y-4">
                       <div>
-                        <Label htmlFor="depositAmount">Amount ($)</Label>
+                        <Label htmlFor="depositAmount">Amount (R)</Label>
                         <Input
                           id="depositAmount"
                           type="number"
@@ -184,13 +184,14 @@ const Wallet = () => {
                           placeholder="50.00"
                           value={depositAmount}
                           onChange={(e) => setDepositAmount(e.target.value)}
+                          className="text-white"
                         />
                       </div>
                       <div className="flex gap-2">
-                        <Button variant="outline" size="sm" onClick={() => setDepositAmount('10')}>$10</Button>
-                        <Button variant="outline" size="sm" onClick={() => setDepositAmount('50')}>$50</Button>
-                        <Button variant="outline" size="sm" onClick={() => setDepositAmount('100')}>$100</Button>
-                        <Button variant="outline" size="sm" onClick={() => setDepositAmount('500')}>$500</Button>
+                        <Button variant="outline" size="sm" onClick={() => setDepositAmount('10')}>R10</Button>
+                        <Button variant="outline" size="sm" onClick={() => setDepositAmount('50')}>R50</Button>
+                        <Button variant="outline" size="sm" onClick={() => setDepositAmount('100')}>R100</Button>
+                        <Button variant="outline" size="sm" onClick={() => setDepositAmount('500')}>R500</Button>
                       </div>
                     </div>
                     <DialogFooter>
@@ -221,7 +222,7 @@ const Wallet = () => {
                     </DialogHeader>
                     <div className="space-y-4">
                       <div>
-                        <Label htmlFor="withdrawAmount">Amount ($)</Label>
+                        <Label htmlFor="withdrawAmount">Amount (R)</Label>
                         <Input
                           id="withdrawAmount"
                           type="number"
@@ -231,6 +232,7 @@ const Wallet = () => {
                           placeholder="50.00"
                           value={withdrawAmount}
                           onChange={(e) => setWithdrawAmount(e.target.value)}
+                          className="text-white"
                         />
                         <p className="text-sm text-muted-foreground mt-1">
                           Available: {formatCurrency(profile?.wallet_balance || 0)}
