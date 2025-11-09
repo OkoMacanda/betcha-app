@@ -26,6 +26,7 @@ import Contacts from "./pages/Contacts";
 import Groups from "./pages/Groups";
 import ChallengeHistory from "./pages/ChallengeHistory";
 import Settings from "./pages/Settings";
+import AIRefChatbot from "./components/AIRefChatbot";
 
 const queryClient = new QueryClient();
 
@@ -72,6 +73,7 @@ const App = () => (
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <AIRefChatbot />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
