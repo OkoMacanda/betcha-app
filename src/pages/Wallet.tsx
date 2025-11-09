@@ -387,7 +387,7 @@ const Wallet = () => {
 
               <TabsContent value="bets">
                 {!transactions?.filter(tx => ['bet_placed', 'bet_won', 'bet_lost', 'refund'].includes(tx.type)).length ? (
-                  <p className="text-center text-muted-foreground py-8">No bet transactions yet</p>
+                  <p className="text-center text-muted-foreground py-8">No challenge transactions yet</p>
                 ) : (
                   <div className="border rounded-lg">
                     <Table>

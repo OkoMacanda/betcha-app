@@ -129,7 +129,7 @@ const BetDetail = () => {
     } catch (error: any) {
       console.error('Error fetching bet:', error);
       toast({
-        title: 'Failed to load bet',
+        title: 'Failed to load challenge',
         description: error.message,
         variant: 'destructive',
       });
@@ -176,11 +176,11 @@ const BetDetail = () => {
       const { success, error } = await acceptBet(bet.id, user.id, bet.bet_amount);
 
       if (!success || error) {
-        throw new Error(error || 'Failed to accept bet');
+        throw new Error(error || 'Failed to accept challenge');
       }
 
       toast({
-        title: 'Bet Accepted!',
+        title: 'Challenge Accepted!',
         description: 'Your funds are locked in escrow. The game can now begin.',
       });
 
@@ -188,7 +188,7 @@ const BetDetail = () => {
     } catch (error: any) {
       console.error('Error accepting bet:', error);
       toast({
-        title: 'Failed to Accept Bet',
+        title: 'Failed to Accept Challenge',
         description: error.message,
         variant: 'destructive',
       });
@@ -205,19 +205,19 @@ const BetDetail = () => {
       const { success, error } = await rejectBet(bet.id);
 
       if (!success || error) {
-        throw new Error(error || 'Failed to reject bet');
+        throw new Error(error || 'Failed to reject challenge');
       }
 
       toast({
-        title: 'Bet Rejected',
-        description: 'The bet has been cancelled and funds returned.',
+        title: 'Challenge Rejected',
+        description: 'The challenge has been cancelled and funds returned.',
       });
 
-      setTimeout(() => navigate('/active-bets'), 1500);
+      setTimeout(() => navigate('/active-challenges'), 1500);
     } catch (error: any) {
       console.error('Error rejecting bet:', error);
       toast({
-        title: 'Failed to Reject Bet',
+        title: 'Failed to Reject Challenge',
         description: error.message,
         variant: 'destructive',
       });
@@ -324,11 +324,11 @@ const BetDetail = () => {
         <div className="container mx-auto px-4 py-8">
           <Alert variant="destructive">
             <AlertCircle className="h-4 w-4" />
-            <AlertDescription>Bet not found</AlertDescription>
+            <AlertDescription>Challenge not found</AlertDescription>
           </Alert>
-          <Button variant="outline" className="mt-4" onClick={() => navigate('/active-bets')}>
+          <Button variant="outline" className="mt-4" onClick={() => navigate('/active-challenges')}>
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Active Bets
+            Back to Active Challenges
           </Button>
         </div>
       </div>
@@ -447,12 +447,12 @@ const BetDetail = () => {
               </Card>
             </div>
 
-            {/* Bet Details */}
+            {/* Challenge Details */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="flex items-center gap-3">
                 <DollarSign className="w-5 h-5 text-accent" />
                 <div>
-                  <p className="text-sm text-muted-foreground">Bet Amount</p>
+                  <p className="text-sm text-muted-foreground">Challenge Amount</p>
                   <p className="text-lg font-semibold">{formatCurrency(bet.bet_amount)}</p>
                 </div>
               </div>
@@ -480,12 +480,12 @@ const BetDetail = () => {
               <p className="text-muted-foreground whitespace-pre-wrap">{bet.game_rules}</p>
             </div>
 
-            {/* Pending Bet Actions */}
+            {/* Pending Challenge Actions */}
             {bet.status === 'pending' && isOpponent && (
               <Alert>
                 <AlertCircle className="h-4 w-4" />
                 <AlertDescription>
-                  <p className="font-semibold mb-3">You've been challenged to a bet!</p>
+                  <p className="font-semibold mb-3">You've been challenged!</p>
                   <div className="flex gap-3">
                     <Button
                       onClick={handleAcceptBet}
@@ -500,7 +500,7 @@ const BetDetail = () => {
                       ) : (
                         <>
                           <CheckCircle2 className="mr-2 h-4 w-4" />
-                          Accept Bet
+                          Accept Challenge
                         </>
                       )}
                     </Button>
@@ -530,7 +530,7 @@ const BetDetail = () => {
               <Alert>
                 <Timer className="h-4 w-4" />
                 <AlertDescription>
-                  Waiting for {bet.opponent?.email || "an opponent"} to accept your bet challenge.
+                  Waiting for {bet.opponent?.email || "an opponent"} to accept your challenge.
                 </AlertDescription>
               </Alert>
             )}
@@ -614,7 +614,7 @@ const BetDetail = () => {
                     <Alert>
                       <AlertCircle className="h-4 w-4" />
                       <AlertDescription>
-                        Only bet participants can submit evidence.
+                        Only challenge participants can submit evidence.
                       </AlertDescription>
                     </Alert>
                   )}
@@ -652,7 +652,7 @@ const BetDetail = () => {
                 <CardHeader>
                   <CardTitle>Dispute Management</CardTitle>
                   <CardDescription>
-                    Raise or view disputes about bet outcomes
+                    Raise or view disputes about challenge outcomes
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -666,7 +666,7 @@ const BetDetail = () => {
                     <Alert>
                       <AlertCircle className="h-4 w-4" />
                       <AlertDescription>
-                        Only bet participants can manage disputes.
+                        Only challenge participants can manage disputes.
                       </AlertDescription>
                     </Alert>
                   )}

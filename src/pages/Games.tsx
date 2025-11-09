@@ -32,7 +32,7 @@ const Games = () => {
   const [gameRules, setGameRules] = useState<GameRule[]>([]);
   const [filteredRules, setFilteredRules] = useState<GameRule[]>([]);
 
-  usePageSEO({ title: "Browse Game Rules – Betcha", description: "Search 100+ pre-built game rules or create your own custom bet.", canonicalPath: "/games" });
+  usePageSEO({ title: "Browse Game Rules – Betcha", description: "Search 100+ pre-built game rules or create your own custom challenge.", canonicalPath: "/games" });
 
   // Load game rules on mount
   useEffect(() => {
@@ -101,7 +101,7 @@ const Games = () => {
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-4">Browse Game Rules</h1>
           <p className="text-muted-foreground mb-6">
-            Choose from {gameRules.length}+ pre-built game rules or create your own custom bet
+            Choose from {gameRules.length}+ pre-built game rules or create your own custom challenge
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -131,8 +131,8 @@ const Games = () => {
                 className="pl-10"
               />
             </div>
-            <Button variant="hero" onClick={() => navigate("/create-bet")}>
-              Create Custom Bet
+            <Button variant="hero" onClick={() => navigate("/create-challenge")}>
+              Create Custom Challenge
             </Button>
           </div>
         </div>
@@ -152,7 +152,7 @@ const Games = () => {
                   <Card
                     key={rule.id}
                     className="p-6 hover:border-primary transition-smooth cursor-pointer group"
-                    onClick={() => navigate("/create-bet", { state: { gameRule: rule } })}
+                    onClick={() => navigate("/create-challenge", { state: { gameRule: rule } })}
                   >
                     <div className="flex items-start justify-between mb-3">
                       <h3 className="text-lg font-semibold group-hover:text-primary transition-smooth">
@@ -188,7 +188,7 @@ const Games = () => {
                       className="w-full mt-auto group-hover:border-primary"
                       onClick={(e) => {
                         e.stopPropagation();
-                        navigate("/create-bet", { state: { gameRule: rule } });
+                        navigate("/create-challenge", { state: { gameRule: rule } });
                       }}
                     >
                       Select Game
