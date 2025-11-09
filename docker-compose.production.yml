@@ -1,0 +1,464 @@
+version: '3.9'
+
+# ULTIMATE BETCHA - Production-Ready Stack
+# Combines: Existing UI + TypeScript Microservices + Python AI + Mobile + Streaming
+
+services:
+  # ==================== CDN & Load Balancer ====================
+
+  traefik:
+    image: traefik:v2.10
+    container_name: betcha-traefik
+    command:
+      - "--api.dashboard=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.letsencrypt.acme.httpchallenge=true"
+      - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.letsencrypt.acme.email=${ADMIN_EMAIL}"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+      - "--metrics.prometheus=true"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"  # Dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - traefik-certificates:/letsencrypt
+    networks:
+      - betcha-network
+    restart: unless-stopped
+
+  # ==================== FRONTEND SERVICES ====================
+
+  # Main Web App (React - Existing UI)
+  web-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: betcha-web-app
+    environment:
+      - VITE_API_URL=https://api.betcha.com
+      - VITE_WS_URL=wss://api.betcha.com
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.web.rule=Host(`betcha.com`)"
+      - "traefik.http.routers.web.entrypoints=websecure"
+      - "traefik.http.routers.web.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    restart: unless-stopped
+
+  # Admin Dashboard (Next.js)
+  admin-dashboard:
+    build:
+      context: ./admin-dashboard
+      dockerfile: Dockerfile
+    container_name: betcha-admin
+    environment:
+      - NEXT_PUBLIC_API_URL=https://api.betcha.com
+      - NODE_ENV=production
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.admin.rule=Host(`admin.betcha.com`)"
+      - "traefik.http.routers.admin.entrypoints=websecure"
+      - "traefik.http.routers.admin.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    restart: unless-stopped
+
+  # ==================== BACKEND MICROSERVICES (TypeScript/NestJS) ====================
+
+  # Auth Service
+  auth-service:
+    build:
+      context: ./services/auth
+      dockerfile: Dockerfile
+    container_name: betcha-auth
+    environment:
+      - DATABASE_URL=postgresql://betcha:${DB_PASSWORD}@postgres-primary:5432/betcha_auth
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis-master:6379/0
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_PRIVATE_KEY_PATH=/secrets/jwt_private.pem
+      - JWT_PUBLIC_KEY_PATH=/secrets/jwt_public.pem
+      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - ENABLE_2FA=true
+    volumes:
+      - ./secrets:/secrets:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.auth.rule=Host(`api.betcha.com`) && PathPrefix(`/auth`)"
+      - "traefik.http.routers.auth.entrypoints=websecure"
+      - "traefik.http.routers.auth.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    depends_on:
+      - postgres-primary
+      - redis-master
+    restart: unless-stopped
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+
+  # Wallet & Escrow Service
+  wallet-service:
+    build:
+      context: ./services/wallet
+      dockerfile: Dockerfile
+    container_name: betcha-wallet
+    environment:
+      - DATABASE_URL=postgresql://betcha:${DB_PASSWORD}@postgres-primary:5432/betcha_wallet
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis-master:6379/1
+      - PAYMENT_SERVICE_URL=http://payment-service:3000
+      - PLATFORM_FEE_PERCENTAGE=10
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.wallet.rule=Host(`api.betcha.com`) && PathPrefix(`/wallet`)"
+      - "traefik.http.routers.wallet.entrypoints=websecure"
+      - "traefik.http.routers.wallet.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    depends_on:
+      - postgres-primary
+      - redis-master
+    restart: unless-stopped
+    deploy:
+      replicas: 3
+
+  # Betting/Challenge Service
+  betting-service:
+    build:
+      context: ./services/betting
+      dockerfile: Dockerfile
+    container_name: betcha-betting
+    environment:
+      - DATABASE_URL=postgresql://betcha:${DB_PASSWORD}@postgres-primary:5432/betcha_betting
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis-master:6379/2
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+      - WALLET_SERVICE_URL=http://wallet-service:3000
+      - REF_AI_SERVICE_URL=http://ref-ai-service:8000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.betting.rule=Host(`api.betcha.com`) && PathPrefix(`/bets`)"
+      - "traefik.http.routers.betting.entrypoints=websecure"
+      - "traefik.http.routers.betting.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    depends_on:
+      - postgres-primary
+      - redis-master
+      - elasticsearch
+    restart: unless-stopped
+    deploy:
+      replicas: 5
+
+  # Payment Service
+  payment-service:
+    build:
+      context: ./services/payment
+      dockerfile: Dockerfile
+    container_name: betcha-payment
+    environment:
+      - DATABASE_URL=postgresql://betcha:${DB_PASSWORD}@postgres-primary:5432/betcha_payment
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis-master:6379/3
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+      - PAYSTACK_SECRET_KEY=${PAYSTACK_SECRET_KEY}
+      - FLUTTERWAVE_SECRET_KEY=${FLUTTERWAVE_SECRET_KEY}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.payment.rule=Host(`api.betcha.com`) && PathPrefix(`/payments`)"
+      - "traefik.http.routers.payment.entrypoints=websecure"
+      - "traefik.http.routers.payment.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    depends_on:
+      - postgres-primary
+      - redis-master
+    restart: unless-stopped
+    deploy:
+      replicas: 2
+
+  # Rewards Service
+  rewards-service:
+    build:
+      context: ./services/rewards
+      dockerfile: Dockerfile
+    container_name: betcha-rewards
+    environment:
+      - DATABASE_URL=postgresql://betcha:${DB_PASSWORD}@postgres-primary:5432/betcha_rewards
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis-master:6379/4
+      - WALLET_SERVICE_URL=http://wallet-service:3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.rewards.rule=Host(`api.betcha.com`) && PathPrefix(`/rewards`)"
+      - "traefik.http.routers.rewards.entrypoints=websecure"
+      - "traefik.http.routers.rewards.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    depends_on:
+      - postgres-primary
+      - redis-master
+    restart: unless-stopped
+
+  # ==================== PYTHON AI SERVICES ====================
+
+  # REF AI Rule Engine
+  ref-ai-service:
+    build:
+      context: ./services/ref-ai
+      dockerfile: Dockerfile
+    container_name: betcha-ref-ai
+    environment:
+      - DATABASE_URL=postgresql://betcha:${DB_PASSWORD}@postgres-primary:5432/betcha_ref_ai
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis-master:6379/5
+      - S3_ENDPOINT=https://s3.amazonaws.com
+      - S3_BUCKET=betcha-evidence
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - ML_MODEL_PATH=/models
+    volumes:
+      - ml-models:/models
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.refai.rule=Host(`api.betcha.com`) && PathPrefix(`/ref-ai`)"
+      - "traefik.http.routers.refai.entrypoints=websecure"
+      - "traefik.http.routers.refai.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    depends_on:
+      - postgres-primary
+      - redis-master
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 1G
+
+  # ==================== STREAMING SERVICES ====================
+
+  # RTMP Streaming Server
+  streaming-service:
+    build:
+      context: ./services/streaming
+      dockerfile: Dockerfile
+    container_name: betcha-streaming
+    environment:
+      - REDIS_URL=redis://:${REDIS_PASSWORD}@redis-master:6379/6
+      - BETTING_SERVICE_URL=http://betting-service:3000
+      - YOUTUBE_WEBHOOK_SECRET=${YOUTUBE_WEBHOOK_SECRET}
+      - TIKTOK_WEBHOOK_SECRET=${TIKTOK_WEBHOOK_SECRET}
+    ports:
+      - "1935:1935"  # RTMP
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.streaming.rule=Host(`api.betcha.com`) && PathPrefix(`/streaming`)"
+      - "traefik.http.routers.streaming.entrypoints=websecure"
+      - "traefik.http.routers.streaming.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    depends_on:
+      - redis-master
+    restart: unless-stopped
+
+  # ==================== DATABASES ====================
+
+  # PostgreSQL Primary
+  postgres-primary:
+    image: postgres:16-alpine
+    container_name: betcha-postgres-primary
+    environment:
+      POSTGRES_USER: betcha
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: betcha
+      PGDATA: /var/lib/postgresql/data/pgdata
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./infrastructure/docker/postgres/postgresql.conf:/etc/postgresql/postgresql.conf:ro
+      - ./infrastructure/docker/postgres/init:/docker-entrypoint-initdb.d:ro
+    networks:
+      - betcha-network
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
+
+  # PostgreSQL Read Replicas
+  postgres-replica:
+    image: postgres:16-alpine
+    container_name: betcha-postgres-replica
+    environment:
+      POSTGRES_USER: betcha
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres-replica-data:/var/lib/postgresql/data
+    networks:
+      - betcha-network
+    depends_on:
+      - postgres-primary
+    restart: unless-stopped
+    deploy:
+      replicas: 2
+
+  # Redis Master
+  redis-master:
+    image: redis:7-alpine
+    container_name: betcha-redis-master
+    command: redis-server --requirepass ${REDIS_PASSWORD} --maxmemory 4gb --maxmemory-policy allkeys-lru --appendonly yes
+    volumes:
+      - redis-data:/data
+    networks:
+      - betcha-network
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+
+  # Redis Sentinel (High Availability)
+  redis-sentinel:
+    image: redis:7-alpine
+    container_name: betcha-redis-sentinel
+    command: redis-sentinel /etc/redis/sentinel.conf
+    volumes:
+      - ./infrastructure/docker/redis/sentinel.conf:/etc/redis/sentinel.conf:ro
+    networks:
+      - betcha-network
+    depends_on:
+      - redis-master
+    restart: unless-stopped
+
+  # Elasticsearch (Search & Analytics)
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    container_name: betcha-elasticsearch
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+      - xpack.security.enabled=false
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    networks:
+      - betcha-network
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+
+  # ==================== MESSAGE QUEUE ====================
+
+  rabbitmq:
+    image: rabbitmq:3.12-management-alpine
+    container_name: betcha-rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: betcha
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    networks:
+      - betcha-network
+    restart: unless-stopped
+
+  # ==================== MONITORING & OBSERVABILITY ====================
+
+  # Prometheus
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: betcha-prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=30d'
+    volumes:
+      - ./infrastructure/monitoring/prometheus:/etc/prometheus:ro
+      - prometheus-data:/prometheus
+    networks:
+      - betcha-network
+    restart: unless-stopped
+
+  # Grafana
+  grafana:
+    image: grafana/grafana:latest
+    container_name: betcha-grafana
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD}
+      GF_SERVER_ROOT_URL: https://grafana.betcha.com
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./infrastructure/monitoring/grafana:/etc/grafana/provisioning:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.grafana.rule=Host(`grafana.betcha.com`)"
+      - "traefik.http.routers.grafana.entrypoints=websecure"
+      - "traefik.http.routers.grafana.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+  # Sentry (Error Tracking)
+  sentry:
+    image: sentry:latest
+    container_name: betcha-sentry
+    environment:
+      SENTRY_SECRET_KEY: ${SENTRY_SECRET_KEY}
+      SENTRY_POSTGRES_HOST: postgres-primary
+      SENTRY_DB_USER: betcha
+      SENTRY_DB_PASSWORD: ${DB_PASSWORD}
+      SENTRY_REDIS_HOST: redis-master
+      SENTRY_REDIS_PASSWORD: ${REDIS_PASSWORD}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sentry.rule=Host(`sentry.betcha.com`)"
+      - "traefik.http.routers.sentry.entrypoints=websecure"
+      - "traefik.http.routers.sentry.tls.certresolver=letsencrypt"
+    networks:
+      - betcha-network
+    depends_on:
+      - postgres-primary
+      - redis-master
+    restart: unless-stopped
+
+# ==================== NETWORKS ====================
+networks:
+  betcha-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.29.0.0/16
+
+# ==================== VOLUMES ====================
+volumes:
+  postgres-data:
+  postgres-replica-data:
+  redis-data:
+  elasticsearch-data:
+  rabbitmq-data:
+  prometheus-data:
+  grafana-data:
+  traefik-certificates:
+  ml-models:

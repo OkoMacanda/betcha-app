@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: betcha-production
+  labels:
+    name: betcha-production
+    environment: production
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: betcha-staging
+  labels:
+    name: betcha-staging
+    environment: staging
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: betcha-monitoring
+  labels:
+    name: betcha-monitoring

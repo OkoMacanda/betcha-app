@@ -1,0 +1,22 @@
+export const rulesData = {
+  football: { title: "Football (Soccer)", governingBody: "IFAB", rules: ["11 players per side", "Ball in/out rules", "Scoring: whole ball over line", "Fouls & cards", "Offside rule"], reference: "https://www.theifab.com/laws" },
+  basketball: { title: "Basketball", governingBody: "FIBA/NBA", rules: ["5 players on court", "4 quarters", "Shot clock rules", "Fouls and free throws"], reference: "https://www.fiba.basketball" },
+  cricket: { title: "Cricket", governingBody: "MCC/ICC", rules: ["11 players", "Overs and deliveries", "Dismissals", "Scoring and extras"], reference: "https://www.lords.org/mcc/the-laws-of-cricket" },
+  rugby: { title: "Rugby Union", governingBody: "World Rugby", rules: ["15 players", "Tries, conversions, penalties", "Ruck, maul, scrum, lineout"], reference: "https://www.world.rugby/the-game/laws" },
+  tennis: { title: "Tennis", governingBody: "ITF", rules: ["Points: 15/30/40", "Games and sets", "Tie-break rules", "Service rules"], reference: "https://www.itftennis.com" },
+  baseball: { title: "Baseball", governingBody: "MLB/WBSC", rules: ["9 players", "Innings, pitching, batting", "Outs and scoring", "Foul ball rules"], reference: "https://www.mlb.com" },
+  american_football: { title: "American Football", governingBody: "NFL", rules: ["Downs and yardage", "Scoring types", "Play clock and timing", "Penalties"], reference: "https://www.nfl.com" },
+  ice_hockey: { title: "Ice Hockey", governingBody: "IIHF/NHL", rules: ["3 periods", "Icing and offside", "Penalties and power plays"], reference: "https://www.iihf.com" },
+  field_hockey: { title: "Field Hockey", governingBody: "FIH", rules: ["11 players", "Obstruction and tackling rules", "Penalty corner procedures"], reference: "https://www.fih.hockey" },
+  volleyball: { title: "Volleyball", governingBody: "FIVB", rules: ["6 players", "Rotation and serving", "Rally scoring", "Net faults"], reference: "https://www.fivb.com" },
+  table_tennis: { title: "Table Tennis", governingBody: "ITTF", rules: ["11/21 point games variants", "Service rules", "Spin and let"], reference: "https://www.ittf.com" },
+  golf: { title: "Golf", governingBody: "R&A/USGA", rules: ["Stroke play vs match play", "Penalty strokes", "Out of bounds and relief"], reference: "https://www.randa.org" },
+  boxing: { title: "Boxing", governingBody: "IBA/Commission", rules: ["Rounds and weight classes", "Scoring and KOs", "Fouls and deductions"], reference: "https://www.iba.sport" },
+  mma: { title: "MMA", governingBody: "Unified Rules", rules: ["Rounds and weight classes", "Legal strikes and fouls", "Referee stoppage"], reference: "https://www.ufc.com" },
+  wrestling: { title: "Wrestling", governingBody: "UWW", rules: ["Period structure", "Scoring for takedowns and pins", "Illegal holds"], reference: "https://uww.org" },
+  cycling: { title: "Road Cycling", governingBody: "UCI", rules: ["Race formats", "Team tactics and drafting", "Time cuts and disqualifications"], reference: "https://www.uci.org" },
+  swimming: { title: "Swimming", governingBody: "World Aquatics", rules: ["Strokes and turns", "False starts", "Relay takeovers"], reference: "https://www.worldaquatics.com" },
+  athletics: { title: "Athletics", governingBody: "World Athletics", rules: ["Track event rules", "Field event measurement", "False starts and lane infringements"], reference: "https://www.worldathletics.org" },
+  badminton: { title: "Badminton", governingBody: "BWF", rules: ["Service order", "Rally scoring to 21", "Faults and lets"], reference: "https://bwfbadminton.com" },
+  squash: { title: "Squash", governingBody: "WSF", rules: ["Scoring to 11", "Let & stroke rules", "Service rotation"], reference: "https://www.worldsquash.org" }
+};

@@ -1,0 +1,237 @@
+================================================================================
+BETCHA APP - COMPLETE FILE PATHS REFERENCE
+Generated: 2025-11-07
+================================================================================
+
+ROOT DIRECTORY: /Users/mac/Documents/Betcha App
+
+================================================================================
+CUSTOM BUSINESS COMPONENTS (16 Total)
+================================================================================
+
+/Users/mac/Documents/Betcha App/src/components/ContactsPicker.tsx
+/Users/mac/Documents/Betcha App/src/components/GroupPicker.tsx
+/Users/mac/Documents/Betcha App/src/components/InviteModal.tsx
+/Users/mac/Documents/Betcha App/src/components/ContactsPermission.tsx
+/Users/mac/Documents/Betcha App/src/components/ScoreUpdateModal.tsx
+/Users/mac/Documents/Betcha App/src/components/ChallengeTypeSelector.tsx
+/Users/mac/Documents/Betcha App/src/components/DisputeManager.tsx
+/Users/mac/Documents/Betcha App/src/components/DisputeResolution.tsx
+/Users/mac/Documents/Betcha App/src/components/EvidenceSubmission.tsx
+/Users/mac/Documents/Betcha App/src/components/FloatingScoreWidget.tsx
+/Users/mac/Documents/Betcha App/src/components/HeadToHeadStats.tsx
+/Users/mac/Documents/Betcha App/src/components/ChallengeLobby.tsx
+/Users/mac/Documents/Betcha App/src/components/RechallengeModal.tsx
+/Users/mac/Documents/Betcha App/src/components/Navigation.tsx
+/Users/mac/Documents/Betcha App/src/components/ErrorBoundary.tsx
+/Users/mac/Documents/Betcha App/src/components/ProtectedRoute.tsx
+
+================================================================================
+UI COMPONENTS (48 Total in /ui/ directory)
+================================================================================
+
+/Users/mac/Documents/Betcha App/src/components/ui/accordion.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/alert-dialog.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/alert.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/aspect-ratio.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/avatar.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/badge.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/breadcrumb.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/button.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/calendar.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/carousel.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/chart.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/checkbox.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/collapsible.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/command.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/context-menu.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/dialog.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/drawer.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/dropdown-menu.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/form.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/hover-card.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/input-otp.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/input.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/label.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/menubar.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/navigation-menu.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/pagination.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/popover.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/progress.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/radio-group.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/resizable.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/scroll-area.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/select.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/separator.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/sheet.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/sidebar.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/skeleton.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/slider.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/sonner.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/switch.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/table.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/tabs.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/textarea.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/toast.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/toaster.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/toggle-group.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/toggle.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/tooltip.tsx
+/Users/mac/Documents/Betcha App/src/components/ui/use-toast.ts
+
+================================================================================
+PAGE COMPONENTS (21 Total)
+================================================================================
+
+/Users/mac/Documents/Betcha App/src/pages/ActiveBets.tsx
+/Users/mac/Documents/Betcha App/src/pages/Admin/Overview.tsx
+/Users/mac/Documents/Betcha App/src/pages/BetDetail.tsx
+/Users/mac/Documents/Betcha App/src/pages/ChallengeHistory.tsx
+/Users/mac/Documents/Betcha App/src/pages/Contacts.tsx
+/Users/mac/Documents/Betcha App/src/pages/CreateBet.tsx
+/Users/mac/Documents/Betcha App/src/pages/ForgotPassword.tsx
+/Users/mac/Documents/Betcha App/src/pages/Games.tsx
+/Users/mac/Documents/Betcha App/src/pages/Groups.tsx
+/Users/mac/Documents/Betcha App/src/pages/Index.tsx
+/Users/mac/Documents/Betcha App/src/pages/KYC.tsx
+/Users/mac/Documents/Betcha App/src/pages/LiveStreams.tsx
+/Users/mac/Documents/Betcha App/src/pages/Login.tsx
+/Users/mac/Documents/Betcha App/src/pages/NotFound.tsx
+/Users/mac/Documents/Betcha App/src/pages/Privacy.tsx
+/Users/mac/Documents/Betcha App/src/pages/ResetPassword.tsx
+/Users/mac/Documents/Betcha App/src/pages/Settings.tsx
+/Users/mac/Documents/Betcha App/src/pages/SignUp.tsx
+/Users/mac/Documents/Betcha App/src/pages/Teams.tsx
+/Users/mac/Documents/Betcha App/src/pages/Terms.tsx
+/Users/mac/Documents/Betcha App/src/pages/Wallet.tsx
+
+================================================================================
+API MODULES (12 Total)
+================================================================================
+
+/Users/mac/Documents/Betcha App/src/lib/api/bets.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/challengeHistory.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/contacts.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/disputes.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/evidence.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/groupBetting.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/groups.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/invites.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/kyc.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/scores.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/settings.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/wallet.api.ts
+
+================================================================================
+CUSTOM HOOKS (8 Total)
+================================================================================
+
+/Users/mac/Documents/Betcha App/src/hooks/use-toast.ts
+/Users/mac/Documents/Betcha App/src/hooks/useAuth.ts
+/Users/mac/Documents/Betcha App/src/hooks/useContacts.ts
+/Users/mac/Documents/Betcha App/src/hooks/useCurrency.ts
+/Users/mac/Documents/Betcha App/src/hooks/useGroupBetting.ts
+/Users/mac/Documents/Betcha App/src/hooks/usePageSEO.ts
+/Users/mac/Documents/Betcha App/src/hooks/useSettings.ts
+/Users/mac/Documents/Betcha App/src/hooks/useWallet.ts
+
+================================================================================
+TYPE DEFINITION FILES (7 Total)
+================================================================================
+
+/Users/mac/Documents/Betcha App/src/types/bet.types.ts
+/Users/mac/Documents/Betcha App/src/types/database.types.ts
+/Users/mac/Documents/Betcha App/src/types/dispute.types.ts
+/Users/mac/Documents/Betcha App/src/types/evidence.types.ts
+/Users/mac/Documents/Betcha App/src/types/settings.types.ts
+/Users/mac/Documents/Betcha App/src/types/social.types.ts
+/Users/mac/Documents/Betcha App/src/types/transaction.types.ts
+
+================================================================================
+GENERATED DOCUMENTATION
+================================================================================
+
+/Users/mac/Documents/Betcha App/COMPONENTS_ANALYSIS.md
+/Users/mac/Documents/Betcha App/COMPONENTS_QUICK_REFERENCE.md
+/Users/mac/Documents/Betcha App/COMPONENTS_SUMMARY.txt
+/Users/mac/Documents/Betcha App/COMPONENTS_FILE_PATHS.txt
+
+================================================================================
+EMPTY PLACEHOLDER DIRECTORIES (6 Total)
+================================================================================
+
+/Users/mac/Documents/Betcha App/src/components/Disputes/
+/Users/mac/Documents/Betcha App/src/components/Evidence/
+/Users/mac/Documents/Betcha App/src/components/RuleBuilder/
+/Users/mac/Documents/Betcha App/src/components/Streaming/
+/Users/mac/Documents/Betcha App/src/components/Teams/
+/Users/mac/Documents/Betcha App/src/components/Wallet/
+
+================================================================================
+KEY SOCIAL/GROUP BETTING FILES
+================================================================================
+
+COMPONENTS (Import and use these):
+/Users/mac/Documents/Betcha App/src/components/ContactsPicker.tsx
+/Users/mac/Documents/Betcha App/src/components/GroupPicker.tsx
+/Users/mac/Documents/Betcha App/src/components/InviteModal.tsx
+/Users/mac/Documents/Betcha App/src/components/ContactsPermission.tsx
+
+PAGES (Reference for implementation):
+/Users/mac/Documents/Betcha App/src/pages/Contacts.tsx
+/Users/mac/Documents/Betcha App/src/pages/Groups.tsx
+/Users/mac/Documents/Betcha App/src/pages/CreateBet.tsx
+/Users/mac/Documents/Betcha App/src/pages/BetDetail.tsx
+
+APIs (Call these functions):
+/Users/mac/Documents/Betcha App/src/lib/api/groups.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/groupBetting.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/invites.api.ts
+/Users/mac/Documents/Betcha App/src/lib/api/contacts.api.ts
+
+HOOKS (Use these for state):
+/Users/mac/Documents/Betcha App/src/hooks/useContacts.ts
+/Users/mac/Documents/Betcha App/src/hooks/useGroupBetting.ts
+/Users/mac/Documents/Betcha App/src/hooks/useAuth.ts
+
+TYPES (Import these interfaces):
+/Users/mac/Documents/Betcha App/src/types/social.types.ts
+
+================================================================================
+QUICK IMPORT EXAMPLES
+================================================================================
+
+// Components
+import ContactsPicker from '@/components/ContactsPicker';
+import GroupPicker from '@/components/GroupPicker';
+import InviteModal from '@/components/InviteModal';
+import ContactsPermission from '@/components/ContactsPermission';
+
+// Types
+import { Contact, FriendGroup, ChallengeParticipant } from '@/types/social.types';
+
+// Hooks
+import { useContacts } from '@/hooks/useContacts';
+import { useGroupBetting } from '@/hooks/useGroupBetting';
+import { useAuth } from '@/hooks/useAuth';
+
+// APIs
+import { getGroups, createGroup } from '@/lib/api/groups.api';
+import { createGroupIndividualChallenge } from '@/lib/api/groupBetting.api';
+import { sendEmailInvite } from '@/lib/api/invites.api';
+
+================================================================================
+FILE COUNTS BY CATEGORY
+================================================================================
+
+Components:              16
+UI Components:          48
+Pages:                  21
+API Modules:            12
+Hooks:                  8
+Type Files:             7
+Empty Directories:      6
+                        ---
+TOTAL:                 118 items
+
+================================================================================

@@ -1,0 +1,61 @@
+"""
+Password Service
+Secure password hashing and verification using Argon2
+"""
+from passlib.context import CryptContext
+
+
+class PasswordService:
+    """
+    Password hashing and verification service
+    Uses Argon2 (recommended by OWASP)
+    """
+
+    def __init__(self):
+        self.pwd_context = CryptContext(
+            schemes=["argon2"],
+            deprecated="auto",
+            argon2__memory_cost=65536,  # 64 MB
+            argon2__time_cost=3,         # 3 iterations
+            argon2__parallelism=4,       # 4 threads
+        )
+
+    def hash_password(self, password: str) -> str:
+        """
+        Hash a password using Argon2
+
+        Args:
+            password: Plain text password
+
+        Returns:
+            Hashed password string
+        """
+        return self.pwd_context.hash(password)
+
+    def verify_password(self, plain_password: str, hashed_password: str) -> bool:
+        """
+        Verify a password against its hash
+
+        Args:
+            plain_password: Plain text password to verify
+            hashed_password: Hashed password to compare against
+
+        Returns:
+            True if password matches, False otherwise
+        """
+        try:
+            return self.pwd_context.verify(plain_password, hashed_password)
+        except Exception:
+            return False
+
+    def needs_rehash(self, hashed_password: str) -> bool:
+        """
+        Check if password hash needs to be updated
+
+        Args:
+            hashed_password: Hashed password to check
+
+        Returns:
+            True if hash needs updating (e.g., settings changed)
+        """
+        return self.pwd_context.needs_update(hashed_password)

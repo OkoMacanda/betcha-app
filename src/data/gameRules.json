@@ -1,0 +1,2602 @@
+[
+  {
+    "id": "basketball-1v1",
+    "name": "Basketball 1v1",
+    "category": "sports",
+    "description": "First to 21 points wins",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "soccer-penalties",
+    "name": "Soccer Penalty Shootout",
+    "category": "sports",
+    "description": "Best of 5 penalties",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "tennis-match",
+    "name": "Tennis Match",
+    "category": "sports",
+    "description": "First to 6 games wins",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "golf-18",
+    "name": "Golf 18 Holes",
+    "category": "sports",
+    "description": "Lowest score wins",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "running-5k",
+    "name": "5K Run",
+    "category": "sports",
+    "description": "Fastest time wins",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "swimming-100m",
+    "name": "100m Freestyle",
+    "category": "sports",
+    "description": "Fastest time wins",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "boxing-match",
+    "name": "Boxing Match",
+    "category": "sports",
+    "description": "Points or knockout",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "mma-spar",
+    "name": "MMA Sparring",
+    "category": "sports",
+    "description": "Judge decision",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "baseball-derby",
+    "name": "Home Run Derby",
+    "category": "sports",
+    "description": "Most home runs",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "cricket-bowling",
+    "name": "Cricket Bowling",
+    "category": "sports",
+    "description": "Hit stumps most",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "volleyball",
+    "name": "Volleyball",
+    "category": "sports",
+    "description": "First to 25 points",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "badminton",
+    "name": "Badminton",
+    "category": "sports",
+    "description": "Best of 3 to 21",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "table-tennis",
+    "name": "Table Tennis",
+    "category": "sports",
+    "description": "First to 11 points",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "bowling",
+    "name": "10-Pin Bowling",
+    "category": "sports",
+    "description": "Highest score",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "darts-501",
+    "name": "Darts 501",
+    "category": "sports",
+    "description": "First to zero",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "pool-8ball",
+    "name": "8-Ball Pool",
+    "category": "sports",
+    "description": "Sink all balls",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "skiing-slalom",
+    "name": "Ski Slalom",
+    "category": "sports",
+    "description": "Fastest time",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "skateboard-tricks",
+    "name": "Skateboard Tricks",
+    "category": "sports",
+    "description": "Best tricks",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "rock-climbing",
+    "name": "Rock Climbing Speed",
+    "category": "sports",
+    "description": "Fastest climb",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "cycling-trial",
+    "name": "Cycling Time Trial",
+    "category": "sports",
+    "description": "Fastest time",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "marathon",
+    "name": "Marathon",
+    "category": "sports",
+    "description": "Fastest 42km",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "sprint-100m",
+    "name": "100m Sprint",
+    "category": "sports",
+    "description": "Fastest time",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "relay-4x100",
+    "name": "4x100 Relay",
+    "category": "sports",
+    "description": "Fastest team",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "long-jump",
+    "name": "Long Jump",
+    "category": "sports",
+    "description": "Longest distance",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "high-jump",
+    "name": "High Jump",
+    "category": "sports",
+    "description": "Highest cleared",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "chess",
+    "name": "Chess Match",
+    "category": "board_games",
+    "description": "Checkmate wins",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "checkers",
+    "name": "Checkers",
+    "category": "board_games",
+    "description": "Capture all pieces",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "scrabble",
+    "name": "Scrabble",
+    "category": "board_games",
+    "description": "Highest score",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "monopoly",
+    "name": "Monopoly",
+    "category": "board_games",
+    "description": "Last with money",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "risk",
+    "name": "Risk",
+    "category": "board_games",
+    "description": "World domination",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "stratego",
+    "name": "Stratego",
+    "category": "board_games",
+    "description": "Capture flag",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "backgammon",
+    "name": "Backgammon",
+    "category": "board_games",
+    "description": "Bear off first",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "go",
+    "name": "Go/Baduk",
+    "category": "board_games",
+    "description": "Most territory",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "othello",
+    "name": "Othello",
+    "category": "board_games",
+    "description": "Most pieces",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "connect-four",
+    "name": "Connect Four",
+    "category": "board_games",
+    "description": "Four in a row",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "battleship",
+    "name": "Battleship",
+    "category": "board_games",
+    "description": "Sink all ships",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "jenga",
+    "name": "Jenga",
+    "category": "board_games",
+    "description": "Last move wins",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "dominoes",
+    "name": "Dominoes",
+    "category": "board_games",
+    "description": "Empty hand first",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "catan",
+    "name": "Settlers of Catan",
+    "category": "board_games",
+    "description": "10 victory points",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "ticket-ride",
+    "name": "Ticket to Ride",
+    "category": "board_games",
+    "description": "Highest score",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "carcassonne",
+    "name": "Carcassonne",
+    "category": "board_games",
+    "description": "Highest score",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "pandemic",
+    "name": "Pandemic",
+    "category": "board_games",
+    "description": "Save the world",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "codenames",
+    "name": "Codenames",
+    "category": "board_games",
+    "description": "Find words first",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "azul",
+    "name": "Azul",
+    "category": "board_games",
+    "description": "Highest score",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "splendor",
+    "name": "Splendor",
+    "category": "board_games",
+    "description": "15 prestige points",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "poker",
+    "name": "Poker Heads-Up",
+    "category": "card_games",
+    "description": "Eliminate opponent",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "blackjack",
+    "name": "Blackjack",
+    "category": "card_games",
+    "description": "Closest to 21",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "rummy-500",
+    "name": "Rummy 500",
+    "category": "card_games",
+    "description": "First to 500",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "uno",
+    "name": "UNO",
+    "category": "card_games",
+    "description": "Empty hand first",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "solitaire",
+    "name": "Solitaire Speed",
+    "category": "card_games",
+    "description": "Fastest completion",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "war",
+    "name": "War",
+    "category": "card_games",
+    "description": "Win all cards",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "crazy-eights",
+    "name": "Crazy Eights",
+    "category": "card_games",
+    "description": "Empty hand first",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "spades",
+    "name": "Spades",
+    "category": "card_games",
+    "description": "500 points first",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "hearts",
+    "name": "Hearts",
+    "category": "card_games",
+    "description": "Lowest score",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "bridge",
+    "name": "Bridge",
+    "category": "card_games",
+    "description": "Highest score",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "canasta",
+    "name": "Canasta",
+    "category": "card_games",
+    "description": "5000 points",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "gin-rummy",
+    "name": "Gin Rummy",
+    "category": "card_games",
+    "description": "100 points",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "euchre",
+    "name": "Euchre",
+    "category": "card_games",
+    "description": "10 points",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "cribbage",
+    "name": "Cribbage",
+    "category": "card_games",
+    "description": "121 points",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "mtg",
+    "name": "Magic: The Gathering",
+    "category": "card_games",
+    "description": "Reduce to 0 life",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "spelling-bee",
+    "name": "Spelling Bee",
+    "category": "word_games",
+    "description": "Most correct",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "anagrams",
+    "name": "Anagram Speed",
+    "category": "word_games",
+    "description": "Most solved",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "crossword",
+    "name": "Crossword Race",
+    "category": "word_games",
+    "description": "Fastest completion",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "boggle",
+    "name": "Boggle",
+    "category": "word_games",
+    "description": "Most words",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "hangman",
+    "name": "Hangman",
+    "category": "word_games",
+    "description": "Fewest wrong",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "scattergories",
+    "name": "Scattergories",
+    "category": "word_games",
+    "description": "Most unique",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "password",
+    "name": "Password",
+    "category": "word_games",
+    "description": "Most guessed",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "taboo",
+    "name": "Taboo",
+    "category": "word_games",
+    "description": "Most guessed",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "20-questions",
+    "name": "20 Questions",
+    "category": "word_games",
+    "description": "Most guessed",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "rhyme-battle",
+    "name": "Rhyme Battle",
+    "category": "word_games",
+    "description": "Last to rhyme",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "acronym",
+    "name": "Acronym Challenge",
+    "category": "word_games",
+    "description": "Most votes",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "word-assoc",
+    "name": "Word Association",
+    "category": "word_games",
+    "description": "Last standing",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "story-chain",
+    "name": "Story Chain",
+    "category": "word_games",
+    "description": "Best story",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "synonym-speed",
+    "name": "Synonym Speed",
+    "category": "word_games",
+    "description": "Most synonyms",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "definition-duel",
+    "name": "Definition Duel",
+    "category": "word_games",
+    "description": "Best definitions",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "fifa",
+    "name": "FIFA Match",
+    "category": "video_games",
+    "description": "Most goals",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "cod",
+    "name": "Call of Duty 1v1",
+    "category": "video_games",
+    "description": "First to kills",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "fortnite",
+    "name": "Fortnite 1v1",
+    "category": "video_games",
+    "description": "Most eliminations",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "league",
+    "name": "League of Legends 1v1",
+    "category": "video_games",
+    "description": "First objective",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "mario-kart",
+    "name": "Mario Kart",
+    "category": "video_games",
+    "description": "Best placement",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "street-fighter",
+    "name": "Street Fighter",
+    "category": "video_games",
+    "description": "Best of rounds",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "smash-bros",
+    "name": "Super Smash Bros",
+    "category": "video_games",
+    "description": "Last standing",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "rocket-league",
+    "name": "Rocket League",
+    "category": "video_games",
+    "description": "Most goals",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "among-us",
+    "name": "Among Us",
+    "category": "video_games",
+    "description": "Most wins",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "chess-online",
+    "name": "Chess.com Blitz",
+    "category": "video_games",
+    "description": "Best of games",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "pushups",
+    "name": "Push-up Contest",
+    "category": "physical",
+    "description": "Most reps",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "plank",
+    "name": "Plank Hold",
+    "category": "physical",
+    "description": "Longest time",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "burpees",
+    "name": "Burpee Challenge",
+    "category": "physical",
+    "description": "Most reps",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "pullups",
+    "name": "Pull-up Max",
+    "category": "physical",
+    "description": "Most reps",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "situps",
+    "name": "Sit-up Race",
+    "category": "physical",
+    "description": "Most reps",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "handstand",
+    "name": "Handstand Hold",
+    "category": "physical",
+    "description": "Longest time",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "jump-rope",
+    "name": "Jump Rope",
+    "category": "physical",
+    "description": "Most jumps",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "wall-sit",
+    "name": "Wall Sit",
+    "category": "physical",
+    "description": "Longest time",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "arm-wrestle",
+    "name": "Arm Wrestling",
+    "category": "physical",
+    "description": "Pin opponent",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "thumb-wrestle",
+    "name": "Thumb Wrestling",
+    "category": "physical",
+    "description": "Best of rounds",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "debate",
+    "name": "Debate",
+    "category": "spoken_word",
+    "description": "Judge decision",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "rap-battle",
+    "name": "Rap Battle",
+    "category": "spoken_word",
+    "description": "Best performance",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "roast-battle",
+    "name": "Roast Battle",
+    "category": "spoken_word",
+    "description": "Funniest roasts",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "storytelling",
+    "name": "Storytelling",
+    "category": "spoken_word",
+    "description": "Best story",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  },
+  {
+    "id": "improv",
+    "name": "Improv Comedy",
+    "category": "spoken_word",
+    "description": "Funniest performance",
+    "inputs": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": 30,
+        "label": "Duration (min)"
+      }
+    ],
+    "win_condition": {
+      "type": "highest_score",
+      "params": {}
+    },
+    "evidence_required": [
+      "video",
+      "score_sheet"
+    ],
+    "auto_verifiable": false,
+    "typical_duration": "15-45 minutes",
+    "difficulty": "medium",
+    "popularity": 75
+  }
+]
