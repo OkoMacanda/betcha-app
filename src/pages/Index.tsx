@@ -9,20 +9,20 @@ import Navigation from "@/components/Navigation";
 const Index = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
-  usePageSEO({ title: "Betcha – Secure Social Betting App", description: "Browse 100+ game rules or create custom bets. Secure escrow, AI refereeing, instant payouts.", canonicalPath: "/" });
+  usePageSEO({ title: "Betcha – Secure Social Betting App", description: "Browse 100+ game rules or create custom challenges. Secure escrow, AI refereeing, instant payouts.", canonicalPath: "/" });
 
   const gameCategories = [
     { name: "Sports", icon: Trophy, count: 35 },
     { name: "Board Games", icon: Sparkles, count: 28 },
     { name: "Word Games", icon: Zap, count: 18 },
-    { name: "Custom Bets", icon: Users, count: "∞" }
+    { name: "Custom Challenges", icon: Users, count: "∞" }
   ];
 
   const features = [
     {
       icon: Shield,
       title: "Secure Escrow",
-      description: "Your bets are locked in safely. Winners get paid automatically."
+      description: "Your challenges are locked in safely. Winners get paid automatically."
     },
     {
       icon: Zap,
@@ -31,7 +31,7 @@ const Index = () => {
     },
     {
       icon: Users,
-      title: "Community Bets",
+      title: "Community Challenges",
       description: "Team competitions, club events, and group challenges."
     }
   ];
@@ -59,7 +59,7 @@ const Index = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Lock In Your Bets.
+            Lock In Your Challenges.
             <br />
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Back Up Your Words.
@@ -67,7 +67,7 @@ const Index = () => {
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            "I bet I can beat you!" Now there's an app for that. Betcha makes competitive 
+            "I challenge you!" Now there's an app for that. Betcha makes competitive
             projections real with secure escrow, AI refereeing, and instant payouts.
           </p>
 
@@ -76,7 +76,7 @@ const Index = () => {
               variant="hero"
               size="lg"
               className="text-lg"
-              onClick={() => navigate(user ? "/active-bets" : "/signup")}
+              onClick={() => navigate(user ? "/active-challenges" : "/signup")}
             >
               <Play className="w-5 h-5 mr-2" />
               {user ? "Go to Dashboard" : "Get Started"}
@@ -150,7 +150,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8 px-4">
         <div className="container mx-auto text-center text-muted-foreground">
-          <p>&copy; 2025 Betcha. Lock in your bets. Back up your words.</p>
+          <p>&copy; 2025 Betcha. Lock in your challenges. Back up your words.</p>
         </div>
       </footer>
     </div>

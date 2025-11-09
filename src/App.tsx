@@ -54,8 +54,11 @@ const App = () => (
 
             {/* Protected routes */}
             <Route path="/create-bet" element={<ProtectedRoute><CreateBet /></ProtectedRoute>} />
+            <Route path="/create-challenge" element={<ProtectedRoute><CreateBet /></ProtectedRoute>} />
             <Route path="/bet/:betId" element={<ProtectedRoute><BetDetail /></ProtectedRoute>} />
+            <Route path="/challenge/:betId" element={<ProtectedRoute><BetDetail /></ProtectedRoute>} />
             <Route path="/active-bets" element={<ProtectedRoute><ActiveBets /></ProtectedRoute>} />
+            <Route path="/active-challenges" element={<ProtectedRoute><ActiveBets /></ProtectedRoute>} />
             <Route path="/wallet" element={<ProtectedRoute><Wallet /></ProtectedRoute>} />
             <Route path="/kyc" element={<ProtectedRoute><KYC /></ProtectedRoute>} />
             <Route path="/teams" element={<ProtectedRoute><Teams /></ProtectedRoute>} />

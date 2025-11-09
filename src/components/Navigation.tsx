@@ -19,8 +19,8 @@ export function Navigation() {
 
   const navLinks = [
     { label: 'Games', path: '/games', icon: Target },
-    { label: 'Create Bet', path: '/create-bet', protected: true },
-    { label: 'Active Bets', path: '/active-bets', protected: true },
+    { label: 'Create Challenge', path: '/create-challenge', protected: true },
+    { label: 'Active Challenges', path: '/active-challenges', protected: true },
     { label: 'Contacts', path: '/contacts', icon: UserCircle, protected: true },
     { label: 'Groups', path: '/groups', icon: Users, protected: true },
     { label: 'History', path: '/challenge-history', icon: History, protected: true },
@@ -101,9 +101,9 @@ export function Navigation() {
                   <Wallet className="mr-2 h-4 w-4" />
                   Wallet
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => navigate('/active-bets')}>
+                <DropdownMenuItem onClick={() => navigate('/active-challenges')}>
                   <Target className="mr-2 h-4 w-4" />
-                  Active Bets
+                  Active Challenges
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => navigate('/contacts')}>
                   <UserCircle className="mr-2 h-4 w-4" />

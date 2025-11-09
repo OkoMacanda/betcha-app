@@ -55,17 +55,17 @@ const ActiveBets = () => {
   const { format: formatCurrency } = useCurrency();
 
   usePageSEO({
-    title: "Active Bets – Betcha",
-    description: "Track your live and completed bets, stats and wallet.",
-    canonicalPath: "/active-bets",
+    title: "Active Challenges – Betcha",
+    description: "Track your live and completed challenges, stats and wallet.",
+    canonicalPath: "/active-challenges",
   });
 
   const [bets, setBets] = useState<Bet[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [stats, setStats] = useState({
-    activeBets: 0,
+    activeChallenges: 0,
     winRate: 0,
-    totalBets: 0,
+    totalChallenges: 0,
   });
 
   useEffect(() => {
@@ -107,7 +107,7 @@ const ActiveBets = () => {
 
       if (error) throw error;
 
-      const activeBetsCount = allBets?.filter(
+      const activeChallengesCount = allBets?.filter(
         (bet) => bet.status === "active" || bet.status === "pending"
       ).length || 0;
 
@@ -117,9 +117,9 @@ const ActiveBets = () => {
       const winRate = completedBets.length > 0 ? (wonBets / completedBets.length) * 100 : 0;
 
       setStats({
-        activeBets: activeBetsCount,
+        activeChallenges: activeChallengesCount,
         winRate: Math.round(winRate),
-        totalBets: allBets?.length || 0,
+        totalChallenges: allBets?.length || 0,
       });
     } catch (error: any) {
       console.error("Error calculating stats:", error);
@@ -237,7 +237,7 @@ const ActiveBets = () => {
                     <p className="text-2xl font-bold text-destructive">
                       -{formatCurrency(bet.bet_amount)}
                     </p>
-                    <p className="text-sm text-muted-foreground">Lost bet</p>
+                    <p className="text-sm text-muted-foreground">Lost challenge</p>
                   </>
                 )}
               </div>
@@ -273,8 +273,8 @@ const ActiveBets = () => {
           <Card className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-muted-foreground mb-1">Active Bets</p>
-                <p className="text-3xl font-bold">{stats.activeBets}</p>
+                <p className="text-sm text-muted-foreground mb-1">Active Challenges</p>
+                <p className="text-3xl font-bold">{stats.activeChallenges}</p>
               </div>
               <Play className="w-8 h-8 text-primary" />
             </div>
@@ -305,27 +305,27 @@ const ActiveBets = () => {
 
         {/* Header Actions */}
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold">My Bets</h2>
-          <Button variant="hero" onClick={() => navigate("/create-bet")}>
-            Create New Bet
+          <h2 className="text-2xl font-bold">My Challenges</h2>
+          <Button variant="hero" onClick={() => navigate("/create-challenge")}>
+            Create New Challenge
           </Button>
         </div>
 
-        {/* Bets Tabs */}
+        {/* Challenges Tabs */}
         {bets.length === 0 ? (
           <Alert>
             <Trophy className="h-4 w-4" />
             <AlertDescription>
-              <p className="font-semibold mb-2">No bets yet!</p>
+              <p className="font-semibold mb-2">No challenges yet!</p>
               <p className="text-sm">
-                Start your first competitive challenge by creating a bet.
+                Start your first competitive challenge now.
               </p>
               <Button
                 variant="link"
                 className="p-0 h-auto mt-2"
-                onClick={() => navigate("/create-bet")}
+                onClick={() => navigate("/create-challenge")}
               >
-                Create your first bet →
+                Create your first challenge →
               </Button>
             </AlertDescription>
           </Alert>
@@ -345,7 +345,7 @@ const ActiveBets = () => {
               {pendingBets.length === 0 ? (
                 <Alert>
                   <Timer className="h-4 w-4" />
-                  <AlertDescription>No pending bets</AlertDescription>
+                  <AlertDescription>No pending challenges</AlertDescription>
                 </Alert>
               ) : (
                 pendingBets.map((bet) => <BetCard key={bet.id} bet={bet} />)
@@ -356,7 +356,7 @@ const ActiveBets = () => {
               {activeBets.length === 0 ? (
                 <Alert>
                   <Clock className="h-4 w-4" />
-                  <AlertDescription>No active bets</AlertDescription>
+                  <AlertDescription>No active challenges</AlertDescription>
                 </Alert>
               ) : (
                 activeBets.map((bet) => <BetCard key={bet.id} bet={bet} />)
@@ -367,7 +367,7 @@ const ActiveBets = () => {
               {completedBets.length === 0 ? (
                 <Alert>
                   <CheckCircle2 className="h-4 w-4" />
-                  <AlertDescription>No completed bets</AlertDescription>
+                  <AlertDescription>No completed challenges</AlertDescription>
                 </Alert>
               ) : (
                 completedBets.map((bet) => <BetCard key={bet.id} bet={bet} />)

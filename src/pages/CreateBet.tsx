@@ -51,7 +51,7 @@ const CreateBet = () => {
   const contactIdFromUrl = searchParams.get('contactId');
   const groupIdFromUrl = searchParams.get('groupId');
 
-  usePageSEO({ title: "Create Bet – Betcha", description: "Set up the rules, stakes, and participants for your bet.", canonicalPath: "/create-bet" });
+  usePageSEO({ title: "Create Challenge – Betcha", description: "Set up the rules, stakes, and participants for your challenge.", canonicalPath: "/create-challenge" });
 
   const [challengeType, setChallengeType] = useState<ChallengeType>('one_on_one');
   const [formData, setFormData] = useState({
@@ -96,7 +96,7 @@ const CreateBet = () => {
     if (!user) {
       toast({
         title: "Authentication Required",
-        description: "Please sign in to create a bet.",
+        description: "Please sign in to create a challenge.",
         variant: "destructive",
       });
       return;
@@ -194,17 +194,17 @@ const CreateBet = () => {
       }
 
       toast({
-        title: "Bet Created Successfully!",
-        description: `Your bet is locked in. Waiting for ${formData.opponentEmail} to accept.`,
+        title: "Challenge Created Successfully!",
+        description: `Your challenge is locked in. Waiting for ${formData.opponentEmail} to accept.`,
       });
 
       setTimeout(() => {
-        navigate("/active-bets");
+        navigate("/active-challenges");
       }, 1500);
     } catch (error: any) {
-      console.error('Bet creation error:', error);
+      console.error('Challenge creation error:', error);
       toast({
-        title: "Failed to Create Bet",
+        title: "Failed to Create Challenge",
         description: error.message || "Please try again.",
         variant: "destructive",
       });
@@ -228,7 +228,7 @@ const CreateBet = () => {
       <div className="container mx-auto px-4 py-8 max-w-3xl">
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <h1 className="text-4xl font-bold">Create Your Bet</h1>
+            <h1 className="text-4xl font-bold">Create Your Challenge</h1>
             {balance !== null && balance !== undefined && (
               <Badge variant="outline" className="text-lg px-4 py-2">
                 Balance: {formatCurrency(balance ?? 0)}
@@ -289,16 +289,16 @@ const CreateBet = () => {
             </div>
           </Card>
 
-          {/* Bet Details */}
+          {/* Challenge Details */}
           <Card className="p-6">
             <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
               <DollarSign className="w-5 h-5 text-accent" />
-              Bet Details
+              Challenge Details
             </h3>
 
             <div className="space-y-4">
               <div>
-                <Label htmlFor="betAmount">Bet Amount (per person)</Label>
+                <Label htmlFor="betAmount">Challenge Amount (per person)</Label>
                 <div className="relative">
                   <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">$</span>
                   <Input
@@ -400,7 +400,7 @@ const CreateBet = () => {
               <div>
                 <h3 className="font-semibold mb-2">How Betcha Keeps You Safe</h3>
                 <ul className="text-sm text-muted-foreground space-y-2">
-                  <li>• Funds are held in secure escrow until the bet concludes</li>
+                  <li>• Funds are held in secure escrow until the challenge concludes</li>
                   <li>• REF AI monitors game progress and resolves disputes</li>
                   <li>• Winner receives payout automatically (minus 10% fee)</li>
                   <li>• Full KYC verification ensures legitimate participants</li>
@@ -432,7 +432,7 @@ const CreateBet = () => {
                   Creating...
                 </>
               ) : challengeType === 'one_on_one' ? (
-                'Create Bet & Lock Funds'
+                'Create Challenge & Lock Funds'
               ) : (
                 'Create Challenge & Invite Participants'
               )}
@@ -448,7 +448,7 @@ const CreateBet = () => {
             betId=""
             onInviteSent={() => {
               toast({ title: "Invites sent successfully!" });
-              navigate("/active-bets");
+              navigate("/active-challenges");
             }}
           />
         )}
