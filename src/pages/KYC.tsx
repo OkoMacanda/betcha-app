@@ -30,7 +30,7 @@ const KYC = () => {
   const [isUploading, setIsUploading] = useState(false);
 
   usePageSEO({
-    title: 'KYC Verification - Betcha',
+    title: 'KYC Verification - Challenger',
     description: 'Complete your identity verification',
     canonicalPath: '/kyc'
   });

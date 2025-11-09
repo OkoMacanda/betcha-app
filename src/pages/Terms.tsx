@@ -9,8 +9,8 @@ const Terms = () => {
   const navigate = useNavigate();
 
   usePageSEO({
-    title: 'Terms & Conditions - Betcha',
-    description: 'Terms and conditions for using the Betcha platform',
+    title: 'Terms & Conditions - Challenger',
+    description: 'Terms and conditions for using the Challenger platform',
     canonicalPath: '/terms'
   });
 
@@ -33,7 +33,7 @@ const Terms = () => {
             <section>
               <h2 className="text-xl font-semibold mb-3">1. Acceptance of Terms</h2>
               <p className="text-muted-foreground">
-                By accessing and using Betcha ("the Platform"), you accept and agree to be bound by these Terms and Conditions.
+                By accessing and using Challenger ("the Platform"), you accept and agree to be bound by these Terms and Conditions.
                 If you do not agree to these terms, please do not use our service. Your continued use of the Platform
                 constitutes acceptance of any changes to these terms.
               </p>
@@ -54,9 +54,9 @@ const Terms = () => {
             </section>
 
             <section>
-              <h2 className="text-xl font-semibold mb-3">3. Betting Rules</h2>
+              <h2 className="text-xl font-semibold mb-3">3. Challenge Rules</h2>
               <p className="text-muted-foreground mb-2">
-                All bets placed on Betcha are binding agreements between participants. Once a bet is accepted:
+                All challenges placed on Challenger are binding agreements between participants. Once a challenge is accepted:
               </p>
               <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
                 <li>Funds are immediately locked in escrow until bet resolution</li>
@@ -71,7 +71,7 @@ const Terms = () => {
             <section>
               <h2 className="text-xl font-semibold mb-3">4. Platform Fees</h2>
               <p className="text-muted-foreground mb-2">
-                Betcha charges a 10% platform fee on all completed bets. This fee is non-negotiable and is calculated as follows:
+                Challenger charges a 10% platform fee on all completed challenges. This fee is non-negotiable and is calculated as follows:
               </p>
               <ul className="list-disc pl-6 space-y-1 text-muted-foreground">
                 <li>Total Pot = Bet Amount × Number of Participants</li>
@@ -213,10 +213,10 @@ const Terms = () => {
                 For questions about these terms or to report violations, contact us at:
               </p>
               <p className="text-muted-foreground font-semibold mt-2">
-                Email: legal@betcha.app
+                Email: legal@challenger.app
               </p>
               <p className="text-muted-foreground">
-                Support: support@betcha.app
+                Support: support@challenger.app
               </p>
             </section>
 

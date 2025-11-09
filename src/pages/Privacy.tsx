@@ -9,8 +9,8 @@ const Privacy = () => {
   const navigate = useNavigate();
 
   usePageSEO({
-    title: 'Privacy Policy - Betcha',
-    description: 'Privacy policy for the Betcha platform',
+    title: 'Privacy Policy - Challenger',
+    description: 'Privacy policy for the Challenger platform',
     canonicalPath: '/privacy'
   });
 
@@ -33,7 +33,7 @@ const Privacy = () => {
             <section>
               <h2 className="text-xl font-semibold mb-3">1. Introduction</h2>
               <p className="text-muted-foreground">
-                Betcha ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy explains
+                Challenger ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy explains
                 how we collect, use, disclose, and safeguard your information when you use our platform. Please
                 read this policy carefully. If you do not agree with the terms of this privacy policy, please
                 do not access the platform.
@@ -163,7 +163,7 @@ const Privacy = () => {
                 <li><strong>Restriction:</strong> Request restriction of processing in certain circumstances</li>
               </ul>
               <p className="text-muted-foreground mt-2">
-                To exercise these rights, contact us at privacy@betcha.app. We will respond within 30 days.
+                To exercise these rights, contact us at privacy@challenger.app. We will respond within 30 days.
               </p>
             </section>
 
@@ -200,10 +200,10 @@ const Privacy = () => {
             <section>
               <h2 className="text-xl font-semibold mb-3">10. Children's Privacy</h2>
               <p className="text-muted-foreground">
-                Betcha is not intended for users under the age of 18 (or the legal age in your jurisdiction).
+                Challenger is not intended for users under the age of 18 (or the legal age in your jurisdiction).
                 We do not knowingly collect information from minors. If we discover that we have collected
                 information from a minor, we will delete it immediately. If you believe a minor has provided
-                us with information, please contact us at privacy@betcha.app.
+                us with information, please contact us at privacy@challenger.app.
               </p>
             </section>
 
@@ -232,19 +232,19 @@ const Privacy = () => {
                 If you have questions or concerns about this Privacy Policy or our data practices, contact us at:
               </p>
               <p className="text-muted-foreground font-semibold mt-2">
-                Email: privacy@betcha.app
+                Email: privacy@challenger.app
               </p>
               <p className="text-muted-foreground">
-                Support: support@betcha.app
+                Support: support@challenger.app
               </p>
               <p className="text-muted-foreground">
-                Data Protection Officer: dpo@betcha.app
+                Data Protection Officer: dpo@challenger.app
               </p>
             </section>
 
             <div className="pt-6 border-t">
               <p className="text-sm text-muted-foreground italic">
-                By using Betcha, you acknowledge that you have read and understood this Privacy Policy and
+                By using Challenger, you acknowledge that you have read and understood this Privacy Policy and
                 consent to the collection, use, and disclosure of your information as described herein.
               </p>
             </div>
