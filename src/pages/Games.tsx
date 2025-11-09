@@ -32,7 +32,7 @@ const Games = () => {
   const [gameRules, setGameRules] = useState<GameRule[]>([]);
   const [filteredRules, setFilteredRules] = useState<GameRule[]>([]);
 
-  usePageSEO({ title: "Browse Game Rules – Betcha", description: "Search 100+ pre-built game rules or create your own custom challenge.", canonicalPath: "/games" });
+  usePageSEO({ title: "Browse Game Rules – Challenger", description: "Search 100+ pre-built game rules or create your own custom challenge.", canonicalPath: "/games" });
 
   // Load game rules on mount
   useEffect(() => {

@@ -55,7 +55,7 @@ const ActiveBets = () => {
   const { format: formatCurrency } = useCurrency();
 
   usePageSEO({
-    title: "Active Challenges – Betcha",
+    title: "Active Challenges – Challenger",
     description: "Track your live and completed challenges, stats and wallet.",
     canonicalPath: "/active-challenges",
   });

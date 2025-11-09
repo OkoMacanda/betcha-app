@@ -51,7 +51,7 @@ const CreateBet = () => {
   const contactIdFromUrl = searchParams.get('contactId');
   const groupIdFromUrl = searchParams.get('groupId');
 
-  usePageSEO({ title: "Create Challenge – Betcha", description: "Set up the rules, stakes, and participants for your challenge.", canonicalPath: "/create-challenge" });
+  usePageSEO({ title: "Create Challenge – Challenger", description: "Set up the rules, stakes, and participants for your challenge.", canonicalPath: "/create-challenge" });
 
   const [challengeType, setChallengeType] = useState<ChallengeType>('one_on_one');
   const [formData, setFormData] = useState({
@@ -398,7 +398,7 @@ const CreateBet = () => {
             <div className="flex gap-4">
               <Shield className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-semibold mb-2">How Betcha Keeps You Safe</h3>
+                <h3 className="font-semibold mb-2">How Challenger Keeps You Safe</h3>
                 <ul className="text-sm text-muted-foreground space-y-2">
                   <li>• Funds are held in secure escrow until the challenge concludes</li>
                   <li>• REF AI monitors game progress and resolves disputes</li>

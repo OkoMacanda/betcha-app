@@ -29,8 +29,8 @@ const Wallet = () => {
   const [withdrawDialogOpen, setWithdrawDialogOpen] = useState(false);
 
   usePageSEO({
-    title: 'Wallet - Betcha',
-    description: 'Manage your Betcha wallet, deposit funds, withdraw winnings, and view transaction history.',
+    title: 'Wallet - Challenger',
+    description: 'Manage your Challenger wallet, deposit funds, withdraw winnings, and view transaction history.',
     canonicalPath: '/wallet'
   });
 
@@ -170,7 +170,7 @@ const Wallet = () => {
                     <DialogHeader>
                       <DialogTitle>Deposit Funds</DialogTitle>
                       <DialogDescription>
-                        Add funds to your Betcha wallet
+                        Add funds to your Challenger wallet
                       </DialogDescription>
                     </DialogHeader>
                     <div className="space-y-4">
@@ -217,7 +217,7 @@ const Wallet = () => {
                     <DialogHeader>
                       <DialogTitle>Withdraw Funds</DialogTitle>
                       <DialogDescription>
-                        Withdraw funds from your Betcha wallet
+                        Withdraw funds from your Challenger wallet
                       </DialogDescription>
                     </DialogHeader>
                     <div className="space-y-4">

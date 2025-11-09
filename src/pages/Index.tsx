@@ -9,7 +9,7 @@ import Navigation from "@/components/Navigation";
 const Index = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
-  usePageSEO({ title: "Betcha – Secure Social Betting App", description: "Browse 100+ game rules or create custom challenges. Secure escrow, AI refereeing, instant payouts.", canonicalPath: "/" });
+  usePageSEO({ title: "Challenger – Secure Competition Regulation Platform", description: "Browse 100+ game rules or create custom challenges. Secure escrow, AI refereeing, instant payouts.", canonicalPath: "/" });
 
   const gameCategories = [
     { name: "Sports", icon: Trophy, count: 35 },
@@ -48,7 +48,7 @@ const Index = () => {
           <div className="flex justify-center mb-12">
             <img
               src="/logo.png"
-              alt="Betcha"
+              alt="Challenger"
               className="h-80 md:h-96 lg:h-[32rem] w-auto object-contain logo-hero"
             />
           </div>
@@ -67,8 +67,8 @@ const Index = () => {
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            "I challenge you!" Now there's an app for that. Betcha makes competitive
-            projections real with secure escrow, AI refereeing, and instant payouts.
+            "I challenge you!" Now there's an app for that. Challenger makes competitive
+            challenges official with secure escrow, AI refereeing, and instant payouts.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -115,7 +115,7 @@ const Index = () => {
       <section className="py-16 px-4 bg-card/30">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">
-            How Betcha Works
+            How Challenger Works
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -136,10 +136,10 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">
-            Ready to Put Your Money Where Your Mouth Is?
+            Ready to Make Your Challenges Official?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Join thousands backing up their competitive projections with real stakes.
+            Join thousands making their competitive challenges official with regulated competition.
           </p>
           <Button variant="hero" size="lg" className="text-lg" onClick={() => navigate("/games")}>
             Get Started - It's Free
@@ -150,7 +150,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8 px-4">
         <div className="container mx-auto text-center text-muted-foreground">
-          <p>&copy; 2025 Betcha. Lock in your challenges. Back up your words.</p>
+          <p>&copy; 2025 Challenger. Lock in your challenges. Back up your words.</p>
         </div>
       </footer>
     </div>

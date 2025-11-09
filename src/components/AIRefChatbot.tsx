@@ -30,7 +30,7 @@ const AIRefChatbot = () => {
         {
           id: '1',
           role: 'assistant',
-          content: "Hi! I'm REF AI, your personal challenge assistant. I can help you with:\n\n• Understanding game rules\n• Creating challenges\n• Resolving disputes\n• Explaining how Betcha works\n• Payment and wallet questions\n\nWhat can I help you with today?",
+          content: "Hi! I'm REF AI, your personal challenge assistant. I can help you with:\n\n• Understanding game rules\n• Creating challenges\n• Resolving disputes\n• Explaining how Challenger works\n• Payment and wallet questions\n\nWhat can I help you with today?",
           timestamp: new Date(),
         },
       ]);
@@ -50,13 +50,13 @@ const AIRefChatbot = () => {
       .map((rule) => `${rule.name} (${rule.category}): ${rule.description}. Duration: ${rule.typical_duration}.`)
       .join('\n');
 
-    return `You are REF AI, the official AI referee and assistant for Betcha, a competitive challenge platform. You help users understand game rules, create challenges, resolve disputes, and navigate the platform.
+    return `You are REF AI, the official AI referee and assistant for Challenger, a competitive challenge regulation platform. You help users understand game rules, create challenges, resolve disputes, and navigate the platform.
 
 GAME RULES DATABASE:
 ${gameRulesContext}
 
 PLATFORM INFORMATION:
-- Betcha is a secure challenge platform where users can compete in various games and sports
+- Challenger is a secure competition regulation platform where users can compete in various games and sports
 - Currency: South African Rands (R)
 - Features: Secure escrow, AI refereeing (that's you!), instant payouts, live score tracking
 - Users can create 1v1 challenges, group challenges, team challenges, and tournaments
@@ -151,9 +151,9 @@ Be helpful, friendly, and concise. When users ask about game rules, provide spec
       return `**Dispute Resolution Process:**\n\n1. Go to your challenge details page\n2. Click on the "Disputes" tab\n3. Provide evidence (video, screenshots, score sheets)\n4. I'll review the evidence and make a fair decision\n5. Resolution typically takes 24-48 hours\n\nRemember: Always submit clear evidence! Video proof is the strongest form of evidence. 📹`;
     }
 
-    // How Betcha works
+    // How Challenger works
     if (input.includes('how') || input.includes('work') || input.includes('what is')) {
-      return `**How Betcha Works:**\n\n1️⃣ **Create a Challenge** - Pick a game and set stakes\n2️⃣ **Lock Funds** - Both players deposit money (held in secure escrow)\n3️⃣ **Play & Track** - Use live score tracking or submit evidence\n4️⃣ **Win & Get Paid** - Winner gets payout automatically!\n\n✨ **Key Features:**\n• 100+ pre-built game rules\n• Secure escrow system\n• AI refereeing (that's me!)\n• Live score tracking\n• Instant payouts\n\nWhat would you like to know more about?`;
+      return `**How Challenger Works:**\n\n1️⃣ **Create a Challenge** - Pick a game and set the stakes\n2️⃣ **Lock Funds** - Both players deposit funds (held in secure escrow)\n3️⃣ **Play & Track** - Use live score tracking or submit evidence\n4️⃣ **Win & Get Paid** - Winner gets payout automatically!\n\n✨ **Key Features:**\n• 100+ pre-built game rules\n• Secure escrow system\n• AI refereeing (that's me!)\n• Live score tracking\n• Instant payouts\n\nWhat would you like to know more about?`;
     }
 
     // Group/Team challenges
@@ -172,7 +172,7 @@ Be helpful, friendly, and concise. When users ask about game rules, provide spec
     }
 
     // Default response
-    return `I'm here to help with Betcha! I can assist you with:\n\n• 🎮 Game rules and how to play\n• ⚔️ Creating challenges\n• 💰 Payments, deposits, and withdrawals\n• ⚖️ Dispute resolution\n• 📊 Live score tracking\n• 👥 Group and team challenges\n\nWhat would you like to know?`;
+    return `I'm here to help with Challenger! I can assist you with:\n\n• 🎮 Game rules and how to play\n• ⚔️ Creating challenges\n• 💰 Payments, deposits, and withdrawals\n• ⚖️ Dispute resolution\n• 📊 Live score tracking\n• 👥 Group and team challenges\n\nWhat would you like to know?`;
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {

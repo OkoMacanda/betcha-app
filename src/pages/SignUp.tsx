@@ -22,8 +22,8 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   usePageSEO({
-    title: 'Sign Up - Betcha',
-    description: 'Create your Betcha account and start competing with real stakes.',
+    title: 'Sign Up - Challenger',
+    description: 'Create your Challenger account and start competing in regulated challenges.',
     canonicalPath: '/signup'
   });
 
@@ -84,7 +84,7 @@ const SignUp = () => {
           <div className="flex items-center justify-center mb-6 md:mb-8">
             <img
               src="/logo.png"
-              alt="Betcha Logo"
+              alt="Challenger Logo"
               className="h-24 sm:h-32 md:h-40 w-auto object-contain logo-glow"
             onError={(e) => {
               // Fallback to Trophy icon if logo fails to load
@@ -97,7 +97,7 @@ const SignUp = () => {
               <Trophy className="w-7 h-7 text-primary-foreground" />
             </div>
             <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Betcha
+              Challenger
             </span>
           </div>
         </div>
